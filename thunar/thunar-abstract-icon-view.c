@@ -18,7 +18,6 @@
  */
 
 #include "thunar/thunar-abstract-icon-view.h"
-
 #include "thunar/thunar-action-manager.h"
 #include "thunar/thunar-gobject-extensions.h"
 #include "thunar/thunar-gtk-extensions.h"
@@ -222,10 +221,7 @@ thunar_abstract_icon_view_init (ThunarAbstractIconView *abstract_icon_view)
   xfce_icon_view_set_selection_mode (XFCE_ICON_VIEW (view), GTK_SELECTION_MULTIPLE);
 
   /* add the abstract icon renderer */
-  g_object_set (G_OBJECT (THUNAR_STANDARD_VIEW (abstract_icon_view)->icon_renderer),
-                "follow-state", TRUE,
-                "rounded-corners", TRUE,
-                NULL);
+  g_object_set (G_OBJECT (THUNAR_STANDARD_VIEW (abstract_icon_view)->icon_renderer), "follow-state", TRUE, "rounded-corners", TRUE, NULL);
   gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (view), THUNAR_STANDARD_VIEW (abstract_icon_view)->icon_renderer, FALSE);
   gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (view), THUNAR_STANDARD_VIEW (abstract_icon_view)->icon_renderer,
                                  "file", THUNAR_COLUMN_FILE);
