@@ -446,6 +446,7 @@ thunar_abstract_icon_view_checkbox_hit (XfceIconView           *view,
   *path_return = NULL;
 
   icon_renderer = THUNAR_STANDARD_VIEW (abstract_icon_view)->icon_renderer;
+
   /* Button events and cell areas both use icon-window coordinates. */
   if (!xfce_icon_view_get_item_at_pos (view, event->x, event->y, &path, NULL))
     return FALSE;

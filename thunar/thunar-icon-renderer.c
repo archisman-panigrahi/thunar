@@ -612,6 +612,7 @@ thunar_icon_renderer_render_selection_checkbox (ThunarIconRenderer  *icon_render
     return;
 
   selected = (flags & GTK_CELL_RENDERER_SELECTED) != 0;
+
   /* Icon and compact views normally show unselected checkboxes only while
    * the pointer is over the item. Selected checkboxes remain visible. */
   if (!icon_renderer->list_view_mode
